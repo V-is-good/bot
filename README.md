@@ -40,25 +40,5 @@ Despliegue con Docker
 - Construir:
   docker build -t my-telegram-bot .
 - Ejecutar (ejemplo pasando variables):
-  docker run --env-file .env my-telegram-bot
-
-Seguridad
-- No subas `.env` a repositorios públicos.
-- Si alguna clave fue expuesta, regénérala:
-  - Telegram: BotFather → revoke/regenerate token.
-  - Hugging Face: https://huggingface.co/settings/tokens → revoke/create.
-- Para producción usa secret managers del proveedor (Heroku, Render, AWS Secrets Manager, etc.)
-
-Mejoras sugeridas
-- Persistencia en Postgres/Redis en lugar de state.json.
-- Flujo para que admin deje comentario al responder reportes.
-- Integración de proveedor de imágenes (OpenAI/Replicate/Stability).
-- Pruebas unitarias y contenedorización con supervisión (systemd / process manager).
-
-Si quieres que:
-1) Integre generación de imágenes con OpenAI/Replicate/Stability ahora, dime cuál.  
-2) Añada la opción de que el admin escriba una nota al responder reportes.  
-3) Cambie la persistencia a Postgres / Redis y te dé docker-compose.
-
-Elige qué hago a continuación y lo implemento.
+  docker run --env-file .env my-telegram-bot.
 ```
